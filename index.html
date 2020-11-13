@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - Technical documentation page</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<nav id="navbar">
+  <header>
+    Python FAQs
+  </header>
+  <ul>
+    <li><a class="nav-link" href="#What_is_Python?">What is Python?</a></li>
+    <li><a class="nav-link" href="#What_is_Python_good_for?">What is Python good for?</a></li>
+    <li><a class="nav-link" href="#What_is_the_coding_style_for_Python_programs?">What is the coding style for Python programs?</a></li>
+    <li><a class="nav-link" href="#What_source_code_level_debuggers_are_available_for_Python?">What source code level debuggers are available for Python?</a></li>
+    <li><a class="nav-link" href="#Why_does_Python_use_indenting?">Why does Python use indenting?</a></li>
+    <li><a class="nav-link" href="#Reference">Reference</a></li>
+  </ul>
+</nav>
+<main id="main-doc">
+  <section class="main-section" id="What_is_Python?">
+    <header>
+      What is Python?
+    </header>
+    <article>
+      <p>Python is an interpreted, interactive, object-oriented programming language. It incorporates modules, exceptions, dynamic typing, very high level dynamic data types, and classes. It supports multiple programming paradigms beyond object-oriented programming, such as procedural and functional programming.</p>
+      <p>Python combines remarkable power with very clear syntax. It has interfaces to many system calls and libraries, as well as to various window systems, and is extensible in C or C++. It is also usable as an extension language for applications that need a programmable interface. Finally, Python is portable: it runs on many Unix variants including Linux and macOS, and on Windows.</p>
+    </article>
+  </section>
+
+  <section class="main-section" id="What_is_Python_good_for?">
+    <header>
+      What is Python good for?
+    </header>
+    <article>
+      <p>Python is a high-level general-purpose programming language that can be applied to many different classes of problems.</p>
+      <p>The language comes with a large standard library that covers areas such as:</p>
+      <p>
+        <ul>
+          <li>string processing (regular expressions, Unicode, calculating differences between files),</li>
+          <li>Internet protocols (HTTP, FTP, SMTP, XML-RPC, POP, IMAP, CGI programming), </li>
+          <li>software engineering (unit testing, logging, profiling, parsing Python code), and </li>
+          <li>operating system interfaces (system calls, filesystems, TCP/IP sockets).</li>
+        </ul>
+      </p>
+    </article>
+  </section>
+
+  <section class="main-section" id="What_is_the_coding_style_for_Python_programs?">
+    <header>
+      What is the coding style for Python programs?
+    </header>
+    <article>
+      <p>The coding style required for standard library modules is documented as <a href="https://www.python.org/dev/peps/pep-0008/" target="_blank">PEP 8</a>.</p>
+      <h3>Examples</h3>
+      <h4>Indentation:</h4>
+      <p>Use 4 spaces per indentation level.</p>
+      <h4>Maximum line length:</h4>
+      <p>Limit all lines to a maximum of 79 characters.</p>
+      <p>For flowing long blocks of text with fewer structural restrictions (docstrings or comments), the line length should be limited to 72 characters.</p>
+      <p>Limiting the required editor window width makes it possible to have several files open side-by-side, and works well when using code review tools that present the two versions in adjacent columns.</p>
+      <p>Backslashes may still be appropriate at times. For example, long, multiple with-statements cannot use implicit continuation, so backslashes are acceptable:</p>
+      <code>
+        with open('/path/to/some/file/you/want/to/read') as file_1, \<br>
+        &nbsp; &nbsp; &nbsp; &nbsp;open('/path/to/some/file/being/written', 'w') as file_2:<br>
+        &nbsp; &nbsp; &nbsp; &nbsp; file_2.write(file_1.read())
+      </code>
+      <h4>Imports</h4>
+      <p>Imports should usually be on separate lines</p>
+      <p>Correct:</p>
+      <code>
+        import os<br>
+        import sys
+      </code>
+      <p>Incorrect:</p>
+      <code>
+        import sys, os
+      </code>
+      <p>It's okay to say this though:</p>
+      <code>
+        from subprocess import Popen, PIPE
+      </code>
+    </article>
+  </section>
+
+  <section class="main-section" id="What_source_code_level_debuggers_are_available_for_Python?">
+    <header>
+      What source code level debuggers are available for Python?
+    </header>
+    <article>
+      <p>Several debuggers for Python are described below, and the built-in function breakpoint() allows you to drop into any of them.</p>
+      <p>The pdb module is a simple but adequate console-mode debugger for Python. It is part of the standard Python library, and is documented in the Library Reference Manual. You can also write your own debugger by using the code for pdb as an example.</p>
+      <p>The IDLE interactive development environment, which is part of the standard Python distribution (normally available as Tools/scripts/idle), includes a graphical debugger.</p>
+      <p>PythonWin is a Python IDE that includes a GUI debugger based on pdb. The Pythonwin debugger colors breakpoints and has quite a few cool features such as debugging non-Pythonwin programs. Pythonwin is available as part of the Python for Windows Extensions project and as a part of the <a href="https://www.activestate.com/activepython" target="_blank">ActivePython distribution</a></p>
+      <p>Eric is an IDE built on PyQt and the Scintilla editing component.</p>
+      <p><a href="http://bashdb.sourceforge.net/pydb/" target="_blank">Pydb</a> is a version of the standard Python debugger pdb, modified for use with <a href="https://www.gnu.org/software/ddd" target="_blank">DDD (Data Display Debugger)</a>, a popular graphical debugger front end.</p>
+      <p>There are a number of commercial Python IDEs that include graphical debuggers. They include:</p>
+      <ul>
+        <li><a href="https://wingware.com/" target="_blank">Wing IDE</a>
+        </li>
+        <li><a href="https://komodoide.com/" target="_blank">Komodo IDE</a>
+        </li>
+        <li><a href="https://www.jetbrains.com/pycharm/" target="_blank">PyCharm</a>
+        </li>
+      </ul>
+    </article>
+  </section>
+
+  <section class="main-section" id="Why_does_Python_use_indenting?">
+    <header>
+      Why does Python use indenting?
+    </header>
+    <article>
+      <p>Many coding styles place begin/end brackets on a line by themselves. This makes programs considerably longer and wastes valuable screen space, making it harder to get a good overview of a program. Ideally, a function should fit on one screen (say, 20–30 lines).</p>
+      <p>Indentation for grouping is extremely elegant and contributes a lot to the clarity of the average Python program. Most people learn to love this feature after a while</p>
+      <p>Since there are no begin/end brackets there cannot be a disagreement between grouping perceived by the parser and the human reader.</p>
+      <p>Python coding style is to use 4 spaces per indentation level.</p>
+      <p>Continuation lines should align wrapped elements either vertically using Python's implicit line joining inside parentheses, brackets and braces, or using a hanging indent. When using a hanging indent there should be no arguments on the first line and further indentation should be used to clearly distinguish itself as a continuation line</p>
+      <p>Correct:</p>
+      <code>
+        <p># Aligned with opening delimiter.</p>
+        foo = long_function_name(var_one, var_two,
+        var_three, var_four)
+
+        <p># Add 4 spaces (an extra level of indentation) to distinguish arguments from the rest.</p>
+        def long_function_name(<br>
+        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;var_one, var_two, var_three,<br>
+        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;var_four):<br>
+        &nbsp; &nbsp; &nbsp; &nbsp;print(var_one)<br>
+        <p># Hanging indents should add a level.</p>
+        foo = long_function_name(<br>
+        &nbsp; &nbsp;&nbsp; &nbsp;var_one, var_two,<br>
+        &nbsp; &nbsp;&nbsp; &nbsp;var_three, var_four)
+      </code>
+      <p>Incorrect:</p>
+      <code>
+        <p># Arguments on first line forbidden when not using vertical alignment.</p>
+        foo = long_function_name(var_one, var_two,<br>
+        &nbsp; &nbsp; &nbsp; &nbsp; var_three, var_four)
+        <p># Further indentation required as indentation is not distinguishable.</p>
+        def long_function_name(<br>
+        &nbsp; &nbsp; &nbsp; &nbsp;var_one, var_two, var_three,<br>
+        &nbsp; &nbsp; &nbsp; &nbsp;var_four):<br>
+        &nbsp; &nbsp; &nbsp; &nbsp;print(var_one)<br>
+      </code>
+    </article>
+  </section>
+  <section class="main-section" id="Reference">
+    <header>Reference</header>
+    <article>
+      <ul>
+        <li>
+          All the documentation in this page is taken from
+          <a href="https://www.python.org/" target="_blank">Python.org</a>
+        </li>
+      </ul>
+    </article>
+  </section>
+</main>
+<!-- partial -->
+  
+</body>
+</html>
